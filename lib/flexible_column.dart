@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:column_and_row_practice/container.dart';
 
-class ExpandedColumn extends StatelessWidget {
-  const ExpandedColumn({super.key});
+class FlexibleColumn extends StatelessWidget {
+  const FlexibleColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class ExpandedColumn extends StatelessWidget {
           alto: 100.0,
         ),
         Expanded(
-          // flex: 2,
+          flex: 2,
           child: Caja(
             color: Colors.yellow,
             numero: 3,
@@ -33,8 +33,9 @@ class ExpandedColumn extends StatelessWidget {
             alto: 100.0,
           ),
         ),
-        Expanded(
-          // flex: 1,
+        Flexible(
+          fit: FlexFit.tight,
+          flex: 4,
           child: Caja(
             color: Colors.green,
             numero: 4,
