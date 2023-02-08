@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:column_and_row_practice/flexible_column.dart';
-// import 'package:column_and_row_practice/expanded_column.dart';
-// import 'package:column_and_row_practice/row.dart';
-// import 'package:column_and_row_practice/column.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,31 +15,63 @@ class ScreenExamples extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          useMaterial3: true,
-          colorSchemeSeed: const Color.fromARGB(255, 0, 183, 9)),
+          useMaterial3: false,
+          colorSchemeSeed: const Color.fromARGB(255, 35, 0, 149)),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            // toolbarHeight: 80.0,
+            title: const Text('Bottom App Bar Demo'),
+          ),
           body: Container(
             margin: const EdgeInsets.only(top: 55),
             width: double.infinity,
-            color: Colors.cyan,
-            child: const FlexibleColumn(),
+            color: Colors.white,
+            // child: const FlexibleColumn(),
           ),
           bottomNavigationBar: BottomAppBar(
-              color: Colors.orangeAccent,
-              child: Container(
-                height: 50.0,
+              // shape: const CircularNotchedRectangle(),
+              notchMargin: 5,
+              color: const Color.fromARGB(255, 243, 42, 42),
+              child: SizedBox(
+                // height: 50.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    IconButton(
+                      icon: const Icon(Icons.menu),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.home),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.work),
+                      onPressed: () {},
+                    ),
+                    // const SizedBox(),
+                    IconButton(
+                      icon: const Icon(Icons.business),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.search),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
               )),
           floatingActionButton: FloatingActionButton(
-            backgroundColor: const Color.fromARGB(255, 0, 183, 9),
+            backgroundColor: const Color.fromARGB(255, 33, 150, 243),
             onPressed: () {},
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0),
             ),
-            child: const Icon(Icons.add),
+            child: const Icon(Icons.send),
           ),
-          floatingActionButtonLocation:
-              FloatingActionButtonLocation.centerDocked),
+          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat),
     );
   }
 }

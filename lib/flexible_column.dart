@@ -35,7 +35,7 @@ class FlexibleColumn extends StatelessWidget {
         ),
         Flexible(
           fit: FlexFit.tight,
-          flex: 1,
+          flex: 2,
           child: Caja(
             color: Colors.red,
             numero: 4,
