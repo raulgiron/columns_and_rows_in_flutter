@@ -13,7 +13,7 @@ class FlexibleColumn extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const <Widget>[
         Caja(
-          color: Colors.red,
+          color: Colors.yellow,
           numero: 1,
           ancho: 150.0,
           alto: 100.0,
@@ -25,9 +25,9 @@ class FlexibleColumn extends StatelessWidget {
           alto: 100.0,
         ),
         Expanded(
-          flex: 2,
+          flex: 1,
           child: Caja(
-            color: Colors.yellow,
+            color: Colors.deepPurpleAccent,
             numero: 3,
             ancho: 150.0,
             alto: 100.0,
@@ -35,9 +35,9 @@ class FlexibleColumn extends StatelessWidget {
         ),
         Flexible(
           fit: FlexFit.tight,
-          flex: 4,
+          flex: 1,
           child: Caja(
-            color: Colors.green,
+            color: Colors.red,
             numero: 4,
             ancho: 150.0,
             alto: 100.0,
